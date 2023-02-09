@@ -1,0 +1,117 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+    .home-main-info {
+        width: 50%;
+        border-right: 1px solid #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        .header {
+            width: 50vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: start;
+            padding: 10px 13px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $green;
+            color: #000;
+
+            .navigation {
+                .nav-btn {
+                    padding: 6px;
+                    margin: 1px;
+                    border-radius: 4px;
+                    transition: all .2s ease;
+                    color: $green;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgba(0, 0, 0, 0.8);
+                    }
+                }
+            }
+        }
+
+        .main-section {
+            img {
+                width: 300px;
+                border: 20px solid $green;
+            }
+
+            .text {
+                margin-top: 20px;
+
+
+                h2 {
+                    color: $green;
+                }
+
+                p { padding: 4px; }
+
+                .location {
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .material-symbols-outlined {
+                    color: $green;
+                }
+                .location-text {
+                    font-weight: 600;
+                    padding: 4px;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-top: 20px;
+                .nav-btn {
+                    padding: 10px 20px;
+                    background-color: $green;
+                    margin: 6px;
+                    border-radius: 4px;
+                    color: #000;
+                    font-weight: 600;
+                    border: 1px solid rgba(255, 255, 255, 0.601);
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 700px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+
+        .home-main-info {
+            width: 100vw;
+            padding-top: 100px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.241);
+            .header {
+                width: 100vw;
+                padding: 20px 30px 20px 20px;
+            }
+        }
+
+        .display-cv, .display-portfolio, .display-contacts {
+            width: 100vw;
+            padding: 40px;
+        }
+    }
+}
+

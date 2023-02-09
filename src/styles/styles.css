@@ -1,0 +1,945 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(1, 1, 1);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  padding: 10px 0 40px 0;
+}
+.footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #9acb24;
+}
+
+.bg-grads {
+  background: linear-gradient(45deg, #3eeb32, #086a01);
+  background-size: 400% 400%;
+  -webkit-animation: bg-gradient 5s ease infinite;
+  animation: bg-gradient 5s ease infinite;
+}
+
+@-webkit-keyframes bg-gradient {
+  0% {
+    background-position: 59% 0%;
+  }
+  50% {
+    background-position: 42% 100%;
+  }
+  100% {
+    background-position: 59% 0%;
+  }
+}
+@keyframes bg-gradient {
+  0% {
+    background-position: 59% 0%;
+  }
+  50% {
+    background-position: 42% 100%;
+  }
+  100% {
+    background-position: 59% 0%;
+  }
+}
+@-webkit-keyframes fade-in-top {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 1;
+  }
+}
+.fade-in-top {
+  -webkit-animation: fade-in-top 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-top 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.nav-btn {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.home .home-main-info {
+  width: 50%;
+  border-right: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.home .home-main-info .header {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  padding: 10px 13px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(49, 210, 38);
+  color: #000;
+}
+.home .home-main-info .header .navigation .nav-btn {
+  padding: 6px;
+  margin: 1px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  color: rgb(49, 210, 38);
+}
+.home .home-main-info .header .navigation .nav-btn:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.home .home-main-info .main-section img {
+  width: 300px;
+  border: 20px solid rgb(49, 210, 38);
+}
+.home .home-main-info .main-section .text {
+  margin-top: 20px;
+}
+.home .home-main-info .main-section .text h2 {
+  color: rgb(49, 210, 38);
+}
+.home .home-main-info .main-section .text p {
+  padding: 4px;
+}
+.home .home-main-info .main-section .text .location {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .home-main-info .main-section .text .material-symbols-outlined {
+  color: rgb(49, 210, 38);
+}
+.home .home-main-info .main-section .text .location-text {
+  font-weight: 600;
+  padding: 4px;
+}
+.home .home-main-info .main-section .buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+}
+.home .home-main-info .main-section .buttons .nav-btn {
+  padding: 10px 20px;
+  background-color: rgb(49, 210, 38);
+  margin: 6px;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.601);
+}
+
+@media (max-width: 700px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .home .home-main-info {
+    width: 100vw;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.241);
+  }
+  .home .home-main-info .header {
+    width: 100vw;
+    padding: 20px 30px 20px 20px;
+  }
+  .home .display-cv, .home .display-portfolio, .home .display-contacts {
+    width: 100vw;
+    padding: 40px;
+  }
+}
+.display-cv {
+  width: 50vw;
+  padding: 20px;
+}
+.display-cv h2 {
+  color: rgb(49, 210, 38);
+  padding: 20px 0;
+  font-size: 18px;
+}
+.display-cv span {
+  font-size: 14px;
+  line-height: 24px;
+}
+.display-cv .section h4 {
+  font-size: 14px;
+}
+.display-cv .section p {
+  font-size: 12px;
+}
+.display-cv .section .skill {
+  display: flex;
+  padding: 20px 0;
+  align-items: flex-end;
+  height: 90px;
+  overflow-x: scroll;
+}
+.display-cv .section .skill::-webkit-scrollbar {
+  display: none;
+}
+.display-cv .section .skill .skills-section div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.display-cv .section .skill .skills-section div img {
+  width: 30px;
+}
+
+.display-contacts {
+  width: 50vw;
+  padding: 20px;
+}
+.display-contacts .green {
+  color: rgb(49, 210, 38);
+  font-weight: 600;
+}
+.display-contacts h2 {
+  color: rgb(49, 210, 38);
+}
+.display-contacts p {
+  padding: 20px 0;
+  line-height: 24px;
+}
+.display-contacts ul {
+  list-style: none;
+}
+.display-contacts ul li {
+  padding: 10px 0;
+}
+.display-contacts a {
+  color: #fff;
+  margin-left: 6px;
+  text-decoration: underline;
+}
+
+.display-portfolio {
+  width: 50vw;
+  padding: 20px;
+}
+.display-portfolio h2 {
+  color: rgb(49, 210, 38);
+  padding: 20px 0;
+  font-size: 18px;
+}
+.display-portfolio span {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 10px 0;
+}
+.display-portfolio .projects {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.display-portfolio .projects .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 13px;
+  color: rgb(49, 210, 38);
+  background-color: rgb(27, 27, 27);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.082);
+  letter-spacing: 0.3px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.display-portfolio .projects .project img {
+  width: 100px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+}
+.display-portfolio .projects .project:hover {
+  background-color: rgb(34, 34, 34);
+}
+
+.chatadil {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4d4e53;
+  color: #fff;
+}
+.chatadil .header {
+  padding: 20px;
+  background-color: #303136;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.7px;
+  position: relative;
+  font-size: 14px;
+}
+.chatadil .header .arrow {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  top: 26px;
+  font-size: 13px;
+  color: #9acb24;
+}
+.chatadil .header .arrow span {
+  font-size: 13px;
+}
+.chatadil .desc {
+  padding: 3rem 20vw;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.18px;
+  line-height: 21px;
+}
+.chatadil h3 {
+  color: #9acb24;
+  padding: 10px 0;
+  font-size: 20px;
+  text-align: center;
+}
+.chatadil .goals {
+  margin: 20px;
+}
+.chatadil .goals ul {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.chatadil .goals ul li {
+  padding: 5px;
+}
+.chatadil .page {
+  background-color: rgba(48, 49, 54, 0.3529411765);
+  border: 1px solid rgba(255, 255, 255, 0.232);
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px 40px 30px 40px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.chatadil .page h3 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 20px 0;
+}
+.chatadil .page p {
+  font-size: 15px;
+  letter-spacing: 0.17px;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.chatadil .page ul {
+  padding-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chatadil .page ul li {
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.chatadil .page ul li img {
+  width: 430px;
+}
+.chatadil .page h4 {
+  color: #9acb24;
+  padding-top: 10px;
+  letter-spacing: 0.2px;
+  font-size: 16px;
+}
+.chatadil .page img {
+  width: 450px;
+  padding: 10px;
+}
+.chatadil .skills {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.chatadil .skills .card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px 20px 0;
+  flex-wrap: wrap;
+}
+.chatadil .skills .card-container .card {
+  border: 1px solid rgba(255, 255, 255, 0.662);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(86, 87, 91, 0.3529411765);
+  height: 100px;
+  position: relative;
+}
+.chatadil .skills .card-container .card h6 {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+}
+.chatadil .skills .card-container .card img {
+  width: 60px;
+}
+.chatadil .struct img {
+  width: 200px;
+}
+.chatadil .links {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 25px;
+}
+.chatadil .links h2, .chatadil .links a {
+  color: #9acb24;
+}
+.chatadil .links a {
+  margin-left: 10px;
+}
+.chatadil .links h2 {
+  margin-bottom: 20px;
+}
+
+.mac-donalds {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mac-donalds .header {
+  padding: 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.7px;
+  position: relative;
+  font-size: 14px;
+}
+.mac-donalds .header .arrow {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  top: 26px;
+  font-size: 13px;
+  color: rgb(19, 178, 19);
+}
+.mac-donalds .header .arrow span {
+  font-size: 13px;
+}
+.mac-donalds .desc {
+  padding: 3rem 10vw;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.18px;
+  line-height: 21px;
+}
+.mac-donalds li {
+  padding: 5px;
+}
+.mac-donalds li img {
+  width: 430px;
+}
+.mac-donalds li p {
+  padding: 10px;
+}
+.mac-donalds .goals {
+  margin: 20px;
+}
+.mac-donalds .goals h3 {
+  font-size: 24px;
+}
+.mac-donalds .goals ul {
+  margin-bottom: 20px;
+}
+.mac-donalds .page {
+  background-color: rgba(44, 45, 46, 0.3529411765);
+  border: 1px solid rgba(255, 255, 255, 0.232);
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px 40px 30px 40px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mac-donalds .page h3 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 20px 0;
+}
+.mac-donalds .page p {
+  font-size: 15px;
+  letter-spacing: 0.17px;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.mac-donalds .page ul {
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+.mac-donalds .page h3 {
+  padding-top: 10px;
+  letter-spacing: 0.2px;
+  font-size: 19px;
+  text-align: center;
+}
+.mac-donalds .page img {
+  width: 60vw;
+  padding: 10px;
+}
+.mac-donalds .struct > img {
+  width: 200px;
+}
+.mac-donalds .skills {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.mac-donalds .skills .card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px 20px 0;
+  flex-wrap: wrap;
+}
+.mac-donalds .skills .card-container .card {
+  border: 1px solid rgba(255, 255, 255, 0.662);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(86, 87, 91, 0.3529411765);
+  height: 100px;
+  position: relative;
+}
+.mac-donalds .skills .card-container .card h6 {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+}
+.mac-donalds .skills .card-container .card img {
+  width: 60px;
+}
+.mac-donalds h2 {
+  text-align: center;
+}
+.mac-donalds .links {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 25px;
+}
+.mac-donalds .links h2, .mac-donalds .links a {
+  color: rgb(19, 178, 19);
+}
+.mac-donalds .links a {
+  margin-left: 10px;
+}
+.mac-donalds .links h2 {
+  margin-bottom: 20px;
+}
+.mac-donalds h2, .mac-donalds h3 {
+  color: rgb(19, 178, 19);
+}
+
+.emo {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.emo .pink {
+  color: rgb(175, 6, 85);
+}
+.emo .header {
+  padding: 20px;
+  background-color: rgb(175, 6, 85);
+  color: #000;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.7px;
+  position: relative;
+  font-size: 14px;
+}
+.emo .header .arrow {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  top: 26px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+.emo .header .arrow span {
+  font-size: 18px;
+}
+.emo .desc {
+  padding: 3rem 10vw;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.18px;
+  line-height: 21px;
+}
+.emo .desc p {
+  padding: 10px 0;
+}
+.emo h3 {
+  color: rgb(175, 6, 85);
+  padding: 10px 0;
+  font-size: 20px;
+  text-align: center;
+}
+.emo .goals {
+  margin: 20px;
+}
+.emo .goals ul {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.emo .goals ul li {
+  padding: 5px;
+}
+.emo .page {
+  background-color: rgba(48, 49, 54, 0.3529411765);
+  border: 1px solid rgba(255, 255, 255, 0.232);
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px 40px 30px 40px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.emo .page h3 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 20px 0;
+}
+.emo .page p {
+  font-size: 15px;
+  letter-spacing: 0.17px;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.emo .page ul {
+  padding-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.emo .page ul li {
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.emo .page ul li img {
+  width: 430px;
+}
+.emo .page h4 {
+  color: rgb(175, 6, 85);
+  padding-top: 10px;
+  letter-spacing: 0.2px;
+  font-size: 16px;
+}
+.emo .page img {
+  width: 450px;
+  padding: 10px;
+}
+.emo .skills {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.emo .skills .card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px 20px 0;
+  flex-wrap: wrap;
+}
+.emo .skills .card-container .card {
+  border: 1px solid rgba(255, 255, 255, 0.662);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(86, 87, 91, 0.3529411765);
+  height: 100px;
+  position: relative;
+}
+.emo .skills .card-container .card h6 {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+}
+.emo .skills .card-container .card img {
+  width: 60px;
+}
+.emo .struct img {
+  width: 200px;
+}
+.emo .links {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 25px;
+}
+.emo .links h2, .emo .links a {
+  color: rgb(175, 6, 85);
+}
+.emo .links a {
+  margin-left: 10px;
+}
+.emo .links h2 {
+  margin-bottom: 20px;
+}
+
+.haterville {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #131314;
+  color: #fff;
+}
+.haterville h1 {
+  color: rgb(103, 99, 238);
+}
+.haterville .header {
+  padding: 20px;
+  background-color: #131314;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.264);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.7px;
+  position: relative;
+  font-size: 14px;
+}
+.haterville .header .arrow {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  top: 26px;
+  font-size: 13px;
+  color: rgb(103, 99, 238);
+}
+.haterville .header .arrow span {
+  font-size: 13px;
+}
+.haterville .desc {
+  padding: 3rem 20vw;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.18px;
+  line-height: 21px;
+}
+.haterville h3 {
+  color: rgb(103, 99, 238);
+  padding: 10px 0;
+  font-size: 20px;
+  text-align: center;
+}
+.haterville .goals {
+  margin: 20px;
+}
+.haterville .goals ul {
+  margin-bottom: 20px;
+}
+.haterville .goals ul li {
+  padding: 5px;
+}
+.haterville .page {
+  background-color: rgba(48, 49, 54, 0.3529411765);
+  border: 1px solid rgba(255, 255, 255, 0.232);
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px 40px 30px 40px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.haterville .page h3 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding: 20px 0;
+}
+.haterville .page p {
+  font-size: 15px;
+  letter-spacing: 0.17px;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.haterville .page ul {
+  padding-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.haterville .page ul li {
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.haterville .page ul li img {
+  width: 430px;
+}
+.haterville .page h4 {
+  color: rgb(103, 99, 238);
+  padding-top: 10px;
+  letter-spacing: 0.2px;
+  font-size: 16px;
+}
+.haterville .page img {
+  width: 450px;
+  padding: 10px;
+}
+.haterville .skills {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.haterville .skills .card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px 20px 0;
+  flex-wrap: wrap;
+}
+.haterville .skills .card-container .card {
+  border: 1px solid rgba(255, 255, 255, 0.662);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(86, 87, 91, 0.3529411765);
+  height: 100px;
+  position: relative;
+}
+.haterville .skills .card-container .card h6 {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+}
+.haterville .skills .card-container .card img {
+  width: 60px;
+}
+.haterville .struct img {
+  width: 200px;
+}
+.haterville .links {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 25px;
+}
+.haterville .links h2, .haterville .links a {
+  color: rgb(103, 99, 238);
+}
+.haterville .links a {
+  margin-left: 10px;
+}
+.haterville .links h2 {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=styles.css.map */
